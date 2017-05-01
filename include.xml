@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+
+	<!-- This extension is for ios only. For the android implementation see slots/templates/android/VwsApplication.java -->
+	<ndll name="extension_firebase" if="ios" />
+
+	<section if="ios">
+		<dependency path="dependencies/ios/Analytics/FirebaseCore.framework" />
+		<dependency path="dependencies/ios/Analytics/FirebaseAnalytics.framework" />
+		<dependency path="dependencies/ios/Analytics/FirebaseInstanceID.framework" />
+		<dependency path="dependencies/ios/Analytics/GoogleInterchangeUtilities.framework" />
+		<dependency path="dependencies/ios/Analytics/GoogleSymbolUtilities.framework" />
+		<dependency path="dependencies/ios/Analytics/GoogleToolboxForMac.framework" />
+		<ios linker-flags="-ObjC" />
+	</section>
+
+</project>
